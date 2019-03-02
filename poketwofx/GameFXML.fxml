@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="720.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poketwofx.GameFXMLController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="670.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/background1.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnM1" layoutX="23.0" layoutY="297.0" mnemonicParsing="false" onAction="#selectAttack" prefHeight="36.0" prefWidth="138.0" style="-fx-background-color: black;" text="Move1" textFill="#fffafa" />
+      <Button fx:id="btnM2" layoutX="161.0" layoutY="297.0" mnemonicParsing="false" onAction="#selectAttack" prefHeight="36.0" prefWidth="138.0" style="-fx-background-color: black;" text="Move2" textFill="WHITE" />
+      <Button fx:id="btnM3" layoutX="23.0" layoutY="333.0" mnemonicParsing="false" onAction="#selectAttack" prefHeight="36.0" prefWidth="138.0" style="-fx-background-color: black;" text="Move3" textFill="WHITE" />
+      <Button fx:id="btnM4" layoutX="161.0" layoutY="333.0" mnemonicParsing="false" onAction="#selectAttack" prefHeight="36.0" prefWidth="138.0" style="-fx-background-color: black;" text="Move4" textFill="WHITE" />
+      <AnchorPane layoutX="306.0" layoutY="297.0" opacity="0.5" prefHeight="72.0" prefWidth="342.0" style="-fx-background-color: gray;">
+         <children>
+            <ComboBox fx:id="cmbPokemon" layoutX="14.0" layoutY="24.0" prefHeight="25.0" prefWidth="167.0" promptText="Choose your Pokémon" style="-fx-background-color: transparent;" />
+            <Label layoutX="14.0" layoutY="6.0" text="Switch to:" textFill="WHITE" />
+            <Button fx:id="btnGiveUp" layoutX="239.0" layoutY="21.0" mnemonicParsing="false" onAction="#giveUp" style="-fx-background-color: transparent;" text="Give up!" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnGo" layoutX="181.0" layoutY="24.0" mnemonicParsing="false" onAction="#switchPokemon" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: green;" text="Go!" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="myPokemon" fitHeight="119.0" fitWidth="151.0" layoutX="42.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Sprites%20elección/Pikachu.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="botPokemon" fitHeight="119.0" fitWidth="151.0" layoutX="504.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Sprites%20elección/Celebi.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="205.0" layoutY="175.0" opacity="0.84" prefHeight="86.0" prefWidth="181.0" style="-fx-background-color: red;">
+         <children>
+            <Label fx:id="myName" layoutX="3.0" layoutY="6.0" text="Pikachu" textFill="WHITE" />
+            <ProgressBar fx:id="mypg" layoutX="14.0" layoutY="44.0" prefHeight="18.0" prefWidth="138.0" progress="0.0" style="-fx-background-color: green;" />
+            <Label fx:id="lblMyMax" layoutX="152.0" layoutY="45.0" text="100" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="322.0" layoutY="32.0" opacity="0.84" prefHeight="86.0" prefWidth="174.0" style="-fx-background-color: red;">
+         <children>
+            <Label fx:id="botName" layoutX="6.0" layoutY="6.0" text="Celebi" textFill="WHITE" />
+            <ProgressBar fx:id="botpg" layoutX="6.0" layoutY="43.0" prefHeight="18.0" prefWidth="138.0" progress="0.0" style="-fx-background-color: green;" />
+            <Label fx:id="lblBotMax" layoutX="147.0" layoutY="44.0" text="100" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblExit" layoutX="684.0" layoutY="14.0" onMouseClicked="#handleClose" text="X" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

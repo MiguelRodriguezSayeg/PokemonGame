@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poketwofx.createAccountController">
+   <children>
+      <ImageView fitHeight="149.0" fitWidth="200.0" layoutX="65.0" layoutY="51.0">
+         <image>
+            <Image url="@images/trnr.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="340.0" layoutY="72.0" prefHeight="235.0" prefWidth="336.0" style="-fx-background-color: black;">
+         <children>
+            <Button layoutX="76.0" layoutY="175.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="185.0" style="-fx-background-color: red;" text="Register" textFill="#280000">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TextField layoutX="92.0" layoutY="38.0" prefHeight="26.0" prefWidth="204.0" />
+            <TextField layoutX="92.0" layoutY="106.0" prefHeight="26.0" prefWidth="204.0" />
+            <Label layoutX="10.0" layoutY="51.0" style="-fx-background-color: red;" text="Username:" textFill="WHITE" textOverrun="CLIP" />
+            <Label layoutX="11.0" layoutY="110.0" style="-fx-background-color: red;" text="Password:" textFill="WHITE" textOverrun="CLIP" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="61.0" layoutY="236.0" text="JOIN THE &#10;ADVENTURE" textAlignment="CENTER">
+         <font>
+            <Font name="Algerian" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="693.0" layoutY="7.0" text="X">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="712.0">
+         <children>
+            <ImageView fitHeight="149.0" fitWidth="200.0" layoutX="65.0" layoutY="51.0">
+               <image>
+                  <Image url="@../images/trnr.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="340.0" layoutY="83.0" prefHeight="284.0" prefWidth="336.0" style="-fx-background-color: black;">
+               <children>
+                  <Button fx:id="btnRegister" layoutX="76.0" layoutY="175.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="32.0" prefWidth="185.0" style="-fx-background-color: red;" text="Register" textFill="#280000">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txtGetUsername" layoutX="92.0" layoutY="38.0" prefHeight="26.0" prefWidth="204.0" />
+                  <TextField fx:id="txtGetPassword" layoutX="92.0" layoutY="106.0" prefHeight="26.0" prefWidth="204.0" />
+                  <Label layoutX="10.0" layoutY="51.0" style="-fx-background-color: red;" text="Username:" textFill="WHITE" textOverrun="CLIP" />
+                  <Label layoutX="11.0" layoutY="110.0" style="-fx-background-color: red;" text="Password:" textFill="WHITE" textOverrun="CLIP" />
+                  <Button fx:id="btnLogin" layoutX="76.0" layoutY="227.0" mnemonicParsing="false" onAction="#backToLogin" prefHeight="32.0" prefWidth="185.0" style="-fx-background-color: red;" text="Return to login" textFill="#280000">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="61.0" layoutY="236.0" text="JOIN THE &#10;ADVENTURE" textAlignment="CENTER">
+               <font>
+                  <Font name="Algerian" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="closeLabel" layoutX="693.0" layoutY="7.0" onMouseClicked="#handleClose" text="X">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
